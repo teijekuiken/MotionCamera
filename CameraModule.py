@@ -1,6 +1,7 @@
 import paho.mqtt.client as mqttclient 
 import time
 from picamera import PiCamera
+from datetime import datetime
 
 camera = PiCamera()
 
@@ -15,7 +16,8 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdate, message):
     messagePayload = str(message.payload.decode("utf-8"))
     if messagePayload == "FIRE!":
-        camera.capture('/home/pi/Desktop/image255.jpg')
+        timestr = datetime.now().strftime("%d-%m-%Y_%I-%M-%S_%p")
+        camera.capture('/home/pi/Desktop/image-' + timestr + '.jpg')
         print("capture")
 
 connected=False
@@ -29,7 +31,7 @@ client.on_message = on_message
 client.on_connect=on_connect
 client.connect(broker_address)
 client.loop_start()
-client.subscribe("dev/test")
+client.subscribe("motionsensor/detection")
 while connected!=True:
     time.sleep(0.2)
 while Messagerecieved!=True:
