@@ -15,8 +15,8 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdate, message):
     messagePayload = str(message.payload.decode("utf-8"))
     if messagePayload == "FIRE!":
-	print("capture")
         camera.capture('/home/pi/Desktop/image255.jpg')
+        print("capture")
 
 connected=False
 Messagerecieved=False
