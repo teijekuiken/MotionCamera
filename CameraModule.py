@@ -36,4 +36,5 @@ while connected!=True:
     time.sleep(0.2)
 while Messagerecieved!=True:
     time.sleep(0.2)
+camera.close()
 client.loop_stop()
