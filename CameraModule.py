@@ -3,7 +3,7 @@ import time
 from picamera import PiCamera
 from datetime import datetime
 
-camera = PiCamera()
+
 
 def on_connect(client, userdata, flags, rc):
     if rc==0:
@@ -16,9 +16,11 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdate, message):
     messagePayload = str(message.payload.decode("utf-8"))
     if messagePayload == "FIRE!":
+        camera = PiCamera()
         timestr = datetime.now().strftime("%d-%m-%Y_%I-%M-%S_%p")
         camera.capture('/home/pi/Desktop/image-' + timestr + '.jpg')
         print("capture")
+        camera.close()
 
 connected=False
 Messagerecieved=False
@@ -36,5 +38,4 @@ while connected!=True:
     time.sleep(0.2)
 while Messagerecieved!=True:
     time.sleep(0.2)
-camera.close()
 client.loop_stop()
