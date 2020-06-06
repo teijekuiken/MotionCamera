@@ -1,1 +1,2 @@
-# Movement picture taker
+# Movement camera
+A motionsensor driven camera.
