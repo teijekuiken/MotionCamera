@@ -15,7 +15,7 @@ def on_connect(client, userdata, flags, rc):
 
 def on_message(client, userdate, message):
     messagePayload = str(message.payload.decode("utf-8"))
-    if messagePayload == "FIRE!":
+    if messagePayload == "FIRE":
         camera = PiCamera()
         timestr = datetime.now().strftime("%d-%m-%Y_%I-%M-%S_%p")
         camera.capture('/home/pi/Desktop/image-' + timestr + '.jpg')
@@ -33,7 +33,7 @@ client.on_message = on_message
 client.on_connect=on_connect
 client.connect(broker_address)
 client.loop_start()
-client.subscribe("motionsensor/detection")
+client.subscribe("Motionsensor/Detection")
 while connected!=True:
     time.sleep(0.2)
 while Messagerecieved!=True:
