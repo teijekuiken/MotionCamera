@@ -2,10 +2,10 @@
 #include <SPI.h>
 #include <PubSubClient.h>
 
-int statusWifi = WL_IDLE_STATUS;           // Tijdelijke status totdat WiFi.begin() wordt aangeroepen en blijft actief totdat de maximale aantal pogingen is gedaan of wanneer de connectie is gemaakt 
+int statusWifi = WL_IDLE_STATUS;           
 
 //Objects 
-IPAddress server(192,168,2,31);       // Server, in dit geval mijn laptop
+IPAddress server(192,168,2,31);       // MQTT BROKER
 WiFiClient wifiClient;
 
 
