@@ -25,7 +25,7 @@ def on_message(client, userdate, message):
 connected=False
 Messagerecieved=False
 
-broker_address="192.168.2.31"
+broker_address="YOUR MQTT BROKER IP ADDRESS HERE"
 
 print("creating new instance")
 client= mqttclient.Client("P1")
@@ -33,7 +33,7 @@ client.on_message = on_message
 client.on_connect=on_connect
 client.connect(broker_address)
 client.loop_start()
-client.subscribe("Motionsensor/Detection")
+client.subscribe("YOUR TOPIC HERE")
 while connected!=True:
     time.sleep(0.2)
 while Messagerecieved!=True:
