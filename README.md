@@ -7,7 +7,7 @@ The motion sensor has a range for up to 7 meters but just as everbody else you w
 ## What do you need?
 For this project you will need the following components:
 
-- Raspberry Pi model 3 or 4 with WiFi.
+- Raspberry Pi model 3 or 4 with WiFi and Raspbian installed.
 - Arduino Nano IoT 33
 - Raspberry Pi NoIR Camera V2 or Camera Module V2
 - PIR Motion sensor
@@ -17,6 +17,8 @@ For this project you will need the following components:
 - 2 jumper cables
 - BreadBoard
 - Multimeter
+- USB-C cable
+- 5V power supply with usb connection
 
 ##  The start..
 ### Making 5V possible
@@ -45,7 +47,14 @@ See the picture below on how to connect the PIR motionsensor to the Arduino.
 
 <img alt="PIR motionsensor attached to Arduino" src="https://git.fhict.nl/I424717/bewegingscamera/-/raw/master/images/MotionSensor-Arduino.png" width="650" height="500" />
 
-When everything is connected it's time to connect your Arduino with USB to you computer to upload. When your Arduino is connected upload to following sketch: [ArduinoBewegingsSensor.ino](ArduinoBewegingsSensor/ArduinoBewegingsSensor.ino) to your Arduino and replace the WiFi SSID, IP Adress and WIFI password to your liking. Also in the MQTT setup the topics as your liking.
+When everything is connected it's time to connect your Arduino with USB to you computer to upload. When your Arduino is connected upload to following sketch: [ArduinoBewegingsSensor.ino](ArduinoBewegingsSensor/ArduinoBewegingsSensor.ino) to your Arduino and replace the WiFi SSID, IP Adress and WIFI password to your liking. Also in the MQTT setup the topics to your liking.
+
+## Setting up the Rapsberry PI
+
+To setup the Raspberry Pi you first need to connect the camera to the Raspberry Pi. This can be done by connecting the camera cable to the Raspberry Pi Camera port, the blue side of the cable has to point to the usb ports of the Raspberry Pi.
+
+
+
 
 
 
