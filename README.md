@@ -45,7 +45,7 @@ See the picture below on how to connect the PIR motionsensor to the Arduino.
 
 <img alt="PIR motionsensor attached to Arduino" src="https://git.fhict.nl/I424717/bewegingscamera/-/raw/master/images/MotionSensor-Arduino.png" width="650" height="500" />
 
-When everything is connected it's time to connect your Arduino with USB to you computer to upload. When your Arduino is connected upload to following sketch to your Arduino and replace the WiFi SSID, IP Adress and WIFI password to your liking. Also in the MQTT setup the topics as your liking:
-[ArduinoBewegingsSensor.ino](ArduinoBewegingsSensor/ArduinoBewegingsSensor.ino)
+When everything is connected it's time to connect your Arduino with USB to you computer to upload. When your Arduino is connected upload to following sketch: [ArduinoBewegingsSensor.ino](ArduinoBewegingsSensor/ArduinoBewegingsSensor.ino) to your Arduino and replace the WiFi SSID, IP Adress and WIFI password to your liking. Also in the MQTT setup the topics as your liking.
+
 
 
