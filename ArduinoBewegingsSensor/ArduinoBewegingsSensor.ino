@@ -5,7 +5,7 @@
 int statusWifi = WL_IDLE_STATUS;           
 
 //Objects 
-IPAddress server(192,168,2,31);       // MQTT BROKER
+IPAddress server(000,000,0,00);       //FILL IN OWN IP ADDRESS FOR MQTT BROKER!
 WiFiClient wifiClient;
 
 
@@ -13,9 +13,9 @@ WiFiClient wifiClient;
 void wifiSetup() {
   Serial.println("Attempting to connect to the network...");
   Serial.print("Network name: ");
-  Serial.println("MaisonPrettyBoy2.4");
+  Serial.println("YOUR WIFI NAME HERE");
 
-  statusWifi = WiFi.begin("MaisonPrettyBoy2.4", "SjoTeiLis1");
+  statusWifi = WiFi.begin("YOUR NETWORK NAME HERE", "YOUR NETWORK PASSWORD HERE");
   if (statusWifi != WL_CONNECTED) { 
     Serial.println("Couldn't get a wifi connection");
     while(true);
@@ -26,8 +26,8 @@ void wifiSetup() {
 }
 
 const int defaultportMosquitto = 1883; 
-const char* arduino_ID = "Arduino_Teije";
-const char* pubTopic = "Motionsensor/Detection";
+const char* arduino_ID = "YOUR ARDUINO NAME HERE";
+const char* pubTopic = "YOUR TOPICS HERE";
 
 //Objects 
 PubSubClient mqttClient(wifiClient); 
