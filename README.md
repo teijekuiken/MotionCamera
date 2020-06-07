@@ -18,7 +18,7 @@ For this project you will need the following components:
 - BreadBoard
 - Multimeter
 - USB-C cable
-- 5V power supply with usb connection
+- 5V power supply with USB-C connection
 
 ##  The start..
 ### Making 5V possible
@@ -40,6 +40,26 @@ See the picture below how to attach your Arduino to the breadboard:
 
 When everything is attached grab your multimeter en check if the right amounts of volts are comming thru.
 
+## Setting up the Rapsberry PI
+
+### Connecting the camera
+To setup the Raspberry Pi you first need to connect the camera to the Raspberry Pi. This can be done by connecting the camera cable to the Raspberry Pi Camera port, the blue side of the cable has to point to the usb ports of the Raspberry Pi.
+
+### Installing Mosquitto
+
+Open the terminal on the Raspberry Pi and install Mosquitto with the following commands:
+> sudo apt update
+
+> sudo apt install -y mosquitto mosquitto-clients
+
+> sudo systemctl enable mosquitto.service
+
+Check if Mosquitto is installed with the following command: 
+> mosquitto -v
+
+To get the MQTT sever adress of the Raspberry Pi use the following command and remember the IP-Address:
+> hostname -I
+
 ## Setting up the Arduino
 ###  Connecting the PIR motion sensor
 
@@ -47,11 +67,13 @@ See the picture below on how to connect the PIR motionsensor to the Arduino.
 
 <img alt="PIR motionsensor attached to Arduino" src="https://git.fhict.nl/I424717/bewegingscamera/-/raw/master/images/MotionSensor-Arduino.png" width="650" height="500" />
 
-When everything is connected it's time to connect your Arduino with USB to you computer to upload. When your Arduino is connected upload to following sketch: [ArduinoBewegingsSensor.ino](ArduinoBewegingsSensor/ArduinoBewegingsSensor.ino) to your Arduino and replace the WiFi SSID, IP Adress and WIFI password to your liking. Also in the MQTT setup the topics to your liking.
+When everything is connected it's time to connect your Arduino with USB to you computer to upload the Sketch. 
 
-## Setting up the Rapsberry PI
+When your Arduino is connected upload to following sketch: [ArduinoBewegingsSensor.ino](ArduinoBewegingsSensor/ArduinoBewegingsSensor.ino) to your Arduino and replace the WiFi SSID, IP Adress and WIFI password to your liking. 
+The IP-Address we got in the steps installing Mosquitto. In the Sketch also adjust the topics that you had in mind for the MQTT Broker.
 
-To setup the Raspberry Pi you first need to connect the camera to the Raspberry Pi. This can be done by connecting the camera cable to the Raspberry Pi Camera port, the blue side of the cable has to point to the usb ports of the Raspberry Pi.
+
+
 
 
 
