@@ -25,18 +25,18 @@ For this project you will need the following components:
 To start the project we will start by soldering the jumper on the back side of the Arduino.
 On the picture underneath you see in the yellow circle the 5V jumper. This is located at the back of the Arduino Nano IoT 33.
 
-<img alt="Arduino 5v Jumper" src="https://git.fhict.nl/I424717/bewegingscamera/-/raw/master/images/Arduino-usb-jumper.jpeg" width="400" height="500" />
+<img alt="Arduino 5v Jumper" src="https://github.com/teijekuiken/MotionCamera/blob/master/images/Arduino-usb-jumper.jpeg" width="400" height="500" />
 
 Place the solder on the two copper plates right next to VUSB. This will give you the following result:
 
-<img alt="Arduino with solder" src="https://git.fhict.nl/I424717/bewegingscamera/-/raw/master/images/Arduino-with-solder-Jumper.jpeg" width="400" height="500" />
+<img alt="Arduino with solder" src="https://github.com/teijekuiken/MotionCamera/blob/master/images/Arduino-with-solder-Jumper.jpeg" width="400" height="500" />
 
 To test the solder we will have to attach the arduino to a breadboard and connect the Arduino to a 5v power supply. 
 This can be done by plugging in your Arduino by USB to your computer.
 
 See the picture below how to attach your Arduino to the breadboard:
 
-<img alt="Test setup" src="https://git.fhict.nl/I424717/bewegingscamera/-/raw/master/images/Volt-Test.jpg" width="650" height="500" />
+<img alt="Test setup" src="https://github.com/teijekuiken/MotionCamera/blob/master/images/Volt-Test.jpg" width="650" height="500" />
 
 When everything is attached grab your multimeter en check if the right amounts of volts are comming thru.
 
@@ -65,7 +65,7 @@ To get the MQTT sever adress of the Raspberry Pi use the following command and r
 
 See the picture below on how to connect the PIR motionsensor to the Arduino.
 
-<img alt="PIR motionsensor attached to Arduino" src="https://git.fhict.nl/I424717/bewegingscamera/-/raw/master/images/MotionSensor-Arduino.png" width="650" height="500" />
+<img alt="PIR motionsensor attached to Arduino" src="https://github.com/teijekuiken/MotionCamera/blob/master/images/MotionSensor-Arduino.png" width="650" height="500" />
 
 When everything is connected it's time to connect your Arduino with USB to you computer to upload the Sketch. 
 
